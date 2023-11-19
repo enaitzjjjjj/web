@@ -1,0 +1,402 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('woods_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 1;
+  height: 6rem;
+  text-align: center;
+  margin: 0 auto;
+}
+#lettering-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 6rem;
+  width: 12rem;
+  margin: 0 auto;
+  margin-left: 1rem;
+  margin-top: -6.5rem;
+  margin-right: 1rem;
+} 
+.lettering {
+  position: absolute;
+  width: 12.3rem;
+  height: 6rem;
+  display: flex;
+  flex: 1;
+}
+#franja-buttons {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 6rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+button {
+  font-size: 16px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 2rem;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: color;
+  display: flex;
+  z-index: 1;
+  left: 1rem;
+}
+button:focus,
+button:hover {
+  color: #fff;
+}
+button:focus:after,
+button:hover:after {
+  width: 90%;
+  left: 5%;
+}
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: width, left;
+}
+@media screen and (max-width: 1024px){
+  .lettering{
+    width: 8rem;
+    height: 4rem;
+    top: 1rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .lettering{
+    width: 8rem;
+    height: 4rem;
+    top: 1rem;
+    left: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px){
+  .lettering{
+    width: 0rem;
+    height: 0rem;
+    top: 1rem;
+    left: 0.5rem;
+  }
+}
+.parallax {
+    padding: 5rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    top: 1rem;
+    padding: 1rem;
+    left: -2.5rem;
+    width: 100%;
+}
+.form {
+    border-radius: 0px;
+    padding: 4rem;
+    position: relative; 
+    top: -3.5rem; 
+    left: 2rem;
+    width: 75rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 0%;
+    display: flex;
+    height: 36rem;
+
+}
+.enviar{
+    position: relative;
+    top: -4rem;
+    left: 28.5rem;
+    border-radius: 1rem;
+    width: 6rem;
+}
+
+.centered-paragraph {
+    padding: 3rem;
+    left: -1rem;
+    position: relative;
+    cursor: auto;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+footer {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    margin-top: auto;
+    left: -1.5rem;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.inicio_imagen {
+    position: relative;
+    top: 75px;
+    left: 2%;
+    width: 538px;
+    height: 538px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+/* carta producto */
+
+.card {
+  position: relative;
+  width: 164px;
+  height: 224px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #0A538B 0%, #060A36 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #0A538B 0%, #060A36 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+
+
+.card :not(.heading) {
+  font-size: 15px;
+}
+
+.card :last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+.image-container img {
+  width: 105%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.mensaje_1 {
+color: white;
+text-align: center;
+}
+
+
+/* precio */
+.button {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
+/* fin precio */

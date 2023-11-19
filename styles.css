@@ -1,0 +1,319 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('woods_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 1;
+  height: 6rem;
+  text-align: center;
+  margin: 0 auto;
+}
+#lettering-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 6rem;
+  width: 12rem;
+  margin: 0 auto;
+  margin-left: 1rem;
+  margin-top: -6.5rem;
+  margin-right: 1rem;
+} 
+.lettering {
+  position: absolute;
+  width: 12.3rem;
+  height: 6rem;
+  display: flex;
+  flex: 1;
+}
+#franja-buttons {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 6rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+button {
+  font-size: 16px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 2rem;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: color;
+  display: flex;
+  z-index: 1;
+  left: 1rem;
+}
+button:focus,
+button:hover {
+  color: #fff;
+}
+button:focus:after,
+button:hover:after {
+  width: 90%;
+  left: 5%;
+}
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: width, left;
+}
+@media screen and (max-width: 1024px){
+  .lettering{
+    width: 8rem;
+    height: 4rem;
+    top: 1rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .lettering{
+    width: 8rem;
+    height: 4rem;
+    top: 1rem;
+    left: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px){
+  .lettering{
+    width: 0rem;
+    height: 0rem;
+    top: 1rem;
+    left: 0.5rem;
+  }
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.parallax {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10.5rem;
+    top: -80px;
+}
+
+.inicio_imagen {
+    position: relative;
+    top: 1rem;
+    height: 17rem;
+    pointer-events: none;
+    margin: 0;
+    display: flex;
+    flex: 0.5;
+}
+
+.barra {
+    width: 40em;
+    height: 0.03em;
+    background-color: #fff8f8;
+    top: -2rem;
+    position: relative;
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.articulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    position: relative;
+    padding: auto;
+    top: -10rem;
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+    margin: 0 auto;
+}
+.empresa{
+  flex: 1;
+  align-self: flex-end;
+  display: flex;
+  width: 100%;
+}
+.servicios{
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+}
+.compromiso{
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+}
+.card-container {
+    width: 28rem;
+    height: 20rem;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .card-container::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #38a86a 0%, #000000 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+  
+  .card .img-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+  .card .img-content .bckbox-empresa{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('ft_empresa.jpg');
+    background-size: cover;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+  .card .img-content .bckbox-servicios{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('ft_servicios.jpg');
+    background-size: cover;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+  .card .img-content .bckbox-compromiso{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('ft_compromiso.jpg');
+    background-size: cover;
+    background-position: 0rem;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+  .card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    color: #ffffff;
+    padding: 0px;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card .content .heading {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .card:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card:hover .img-content {
+    scale: 2.5;
+    rotate: 30deg;
+    filter: blur(7px);
+  }
+  
+  .card:hover .img-content svg {
+    fill: transparent;
+  }
+  .content{
+    margin: 0 auto;
+    text-align: center;
+  }
+  footer {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1.5rem;
+    width: 100%;
+    margin-top: auto;
+    left: -1.5rem;
+}
+
